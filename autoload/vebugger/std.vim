@@ -300,7 +300,8 @@ function! s:standardCloseHandlers.removeCurrentMarker(debugger) dict
     sign unplace 1
 endfunction
 
-sign define vebugger_current text=->
+highlight VbgCurrentLine guifg=White guibg=Red
+sign define vebugger_current linehl=VbgCurrentLine
 
 if hlexists('BreakPoint')
     sign define vebugger_breakpoint text=** linehl=BreakPoint texthl=BreakPoint
